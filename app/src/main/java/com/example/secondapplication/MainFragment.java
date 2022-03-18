@@ -127,7 +127,6 @@ public class MainFragment extends Fragment {
         inputFirstName = (EditText) getView().findViewById(R.id.firstname_edit_text);
         inputBirthday = (EditText) getView().findViewById(R.id.birthday_edit_text);
         inputBirthDepartment = (EditText) getView().findViewById(R.id.birth_city_edit_view);
-        inputTelephoneNumber = (EditText) getView().findViewById(R.id.telephone_edit_view);
 
         if (getArguments() != null) {
             inputName.setText(name);
@@ -144,13 +143,7 @@ public class MainFragment extends Fragment {
                 Validate();
             }
         });
-        Add = (Button) getView().findViewById(R.id.button_add);
-        Add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Add();
-            }
-        });
+
         editButton = (Button) getView().findViewById(R.id.button_edit);
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -196,43 +189,7 @@ public class MainFragment extends Fragment {
 
 
 
-    public void Add() {
-        LinearLayout layout = (LinearLayout) getView().findViewById(R.id.number_area);
-        LinearLayout AddLayout = new LinearLayout(getActivity());
-        AddLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        AddLayout.setOrientation(LinearLayout.HORIZONTAL);
-        TextView shownumber = new TextView(getActivity());
-        shownumber.setText(inputTelephoneNumber.getText());
-        sum.add(inputTelephoneNumber.getText().toString());
-        System.out.println(inputTelephoneNumber.getText().toString());
-        System.out.println(shownumber.getText().toString());
-        AddLayout.addView(shownumber);
-        Button call = new Button(getActivity());
-        call.setText("Call");
-        call.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent("android.intent.action.DIAL");
-                String numberToCall = shownumber.getText().toString();
-                Bundle bundle = new Bundle();
-                bundle.putString("number_to_call", numberToCall);
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-        });
-        AddLayout.addView(call);
-        Button delete = new Button(getActivity());
-        delete.setText("Delete");
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                layout.removeView(AddLayout);
-            }
-        });
-        AddLayout.addView(delete);
-        layout.addView(AddLayout);
-        inputTelephoneNumber.setText("");
-    }
+
 
     public void Validate() {
         sum.add(inputName.getText().toString());
@@ -251,8 +208,6 @@ public class MainFragment extends Fragment {
         inputBirthDepartment.setText("");
         inputTelephoneNumber.setText("");
         spinnerDepartments.setSelection(0);
-
-        deleteAllNumbers();
     }
 
     public void search() {
@@ -270,10 +225,6 @@ public class MainFragment extends Fragment {
         startActivity(sendIntent);
     }
 
-    private void deleteAllNumbers() {
-        LinearLayout layout = (LinearLayout) getView().findViewById(R.id.number_area);
-        layout.removeAllViews();
-    }
 
     private void clickBtnValidate() {
         mCallback.setContext(sum);

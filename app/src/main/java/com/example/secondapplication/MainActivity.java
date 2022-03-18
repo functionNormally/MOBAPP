@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnUp
 
     private void addFragment() {
         MainFragment mainFragment = new MainFragment();
-        tx.replace(R.id.main_layout, mainFragment, "main_tag");
+        tx.add(R.id.main_layout, mainFragment, "main_tag");
         tx.addToBackStack(null);
         tx.commit();
     }
