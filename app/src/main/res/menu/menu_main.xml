@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/resetAction"
+        android:title="@string/reset_action">
+
+    </item>
+    <item android:id="@+id/SearchAction"
+        android:title="@string/Search_action">
+
+    </item>
+    <item android:id="@+id/ShareAction"
+        android:title="@string/share_action">
+
+    </item>
+
+</menu>

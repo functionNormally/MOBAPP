@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/show_fragment"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ShowFragment">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/displaylayout"
+    >
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_text"/>
+
+
+
+    <TextView
+        android:id="@+id/firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pre_name_text"/>
+
+    <TextView
+        android:id="@+id/birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Date_na_text"/>
+
+
+    <TextView
+        android:id="@+id/birth_department"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/birth_department" />
+
+
+    <TextView
+        android:id="@+id/birthcity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/City_na_text"/>
+
+
+
+</LinearLayout>
+</ScrollView>

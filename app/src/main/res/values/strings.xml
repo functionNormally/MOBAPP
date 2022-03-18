@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Dont Panic</string>
+    <string name="hello_text">Hello Universe!!!</string>
+    <string name="name_text">Name</string>
+    <string name="pre_name_text">First Name</string>
+    <string name="Date_na_text">Birthday</string>
+    <string name="City_na_text">City of Birth</string>
+    <string name="City_de_text">Department of Birth</string>
+    <string name="validation_text">validation</string>
+    <string name="Birthday">Select</string>
+    <string name="reset_action">Reset</string>
+    <string name="Search_action">Search</string>
+    <string name="share_action">Share</string>
+    <string name="Add">Add</string>
+    <string name="add_telephone_number">Add Telephone number</string>
+    <string name="pickDateActivity">pickDateActivity</string>
+    <string name="Date_action">date</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="CallTeleActivity">CallTeleActivity</string>
+    <string name="EditFirstNameActivity">EditFirstNameActivity</string>
+    <string name="ShowNameActivity">ShowNameActivity</string>
+    <string name="showName">Show</string>
+    <string name="editfirstname">Edit First Name</string>
+    <string name="Confirm">Confirm</string>
+    <string name="call_btn">CALL</string>
+    <string name="birth_department">Birth department</string>
+    <string name="shareOrNot">Share?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="spinner_label">Department of birth</string>
+</resources>
